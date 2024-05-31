@@ -27,7 +27,6 @@ const max = 7;
 const handleClick = () => {
   const random1 = getRandomInt(min, max);
   const random2 = getRandomInt(min, max);
-  console.log(random1, random2);
   image1[0].setAttribute("src", dicee[random1 - 1]);
   image2[0].setAttribute("src", dicee[random2 - 1]);
 };
