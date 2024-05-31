@@ -1,4 +1,4 @@
-const testTitle = document.getElementsByTagName("h1");
+const textTitle = document.getElementsByTagName("h1");
 const image1 = document.getElementsByClassName("img1");
 const image2 = document.getElementsByClassName("img2");
 const button = document.getElementsByTagName("button");
@@ -29,6 +29,13 @@ const handleClick = () => {
   const random2 = getRandomInt(min, max);
   image1[0].setAttribute("src", dicee[random1 - 1]);
   image2[0].setAttribute("src", dicee[random2 - 1]);
+  random1 > random2
+    ? (textTitle[0].innerText = "🚩 Player 1 Wins")
+    : (textTitle[0].innerText = "Player 2 Wins 🚩");
+
+  if (random1 == random2) {
+    textTitle[0].innerText = "Draw !";
+  }
 };
 
 // button onClick action
